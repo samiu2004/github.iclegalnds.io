@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Amazing Offer Title Here</title>
+    <title>Fraicheur Ice Globes - Special Offer</title>
     <style>
+        /* General Styles */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -15,100 +16,148 @@
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 0 auto; /* Centered layout */
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-        h1, h2 {
+        h1, h2, h3 {
             text-align: center;
-            color: #d9534f;
         }
+        h1 {
+            font-size: 2em;
+            color: #2c3e50; /* A more elegant dark blue */
+            padding: 20px 20px 10px 20px;
+            margin: 0;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 1.75em;
+            color: #3498db; /* A calming blue to match the product */
+        }
+        .content-padding {
+            padding: 0 25px 25px 25px;
+        }
+        
+        /* Image: Will scale with its container */
         .main-image {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-        }
-        .content {
-            margin-top: 20px;
-        }
-        .cta-button {
             display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #5cb85c;
-            color: #fff;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            transition: background-color 0.3s;
         }
-        .cta-button:hover {
-            background-color: #4cae4c;
-        }
+        
         .sub-headline {
             text-align: center;
-            font-size: 18px;
+            font-size: 1.1em;
             color: #555;
+            margin-top: 0;
+            padding-bottom: 20px;
         }
+        
+        /* Features List with Custom Diamond Icon */
         .features {
             list-style-type: none;
             padding: 0;
+            margin-top: 25px;
+            column-count: 2; /* Creates two columns on wider screens */
         }
         .features li {
-            background: url('https://image.flaticon.com/icons/png/512/1047/1047249.png') no-repeat left center;
-            background-size: 20px;
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%233498db" d="M256 7.7l60 120 132.3 19.3-95.8 93.3 22.6 131.7L256 312.4l-119.1 62.9 22.6-131.7L63.7 147l132.3-19.3z" transform="scale(0.8) rotate(45 256 256)"/></svg>') no-repeat left center;
+            background-size: 18px;
             padding-left: 30px;
-            margin-bottom: 10px;
-            font-size: 16px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            font-weight: 500;
+            break-inside: avoid-column; /* Prevents items from breaking across columns */
         }
+        
+        /* Call to Action Button */
+        .cta-button {
+            display: block;
+            width: 90%;
+            margin: 30px auto 20px auto;
+            padding: 18px;
+            background: linear-gradient(90deg, #5DADE2, #3498db);
+            color: #fff;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border-bottom: 4px solid #2874a6;
+            transition: all 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            border-bottom-width: 6px;
+        }
+        
+        /* Social Proof Section */
+        .social-proof {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        /* Terms & Conditions */
         .terms {
-            font-size: 12px;
+            font-size: 0.75em;
             color: #777;
-            text-align: justify;
-            margin-top: 30px;
+            text-align: center;
         }
         .terms h3 {
-            text-align: center;
             color: #333;
+        }
+
+        /* --- MOBILE-RESPONSIVE RULES --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6em; /* Make title smaller on mobile */
+            }
+            .features {
+                column-count: 1; /* Stack benefits in a single column on mobile */
+            }
+            .cta-button {
+                font-size: 1.3em;
+            }
+            .content-padding {
+                padding: 0 15px 15px 15px; /* Reduce side padding */
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>[ATTENTION GRABBING HEADLINE]</h1>
-        <p class="sub-headline">[Engaging Sub-headline to build curiosity]</p>
+        <h1>It's Time To Refresh Your Skin & Get A Flawless Glow!</h1>
+        <p class="sub-headline">The easy way to improve your skin – without expensive creams or facials.</p>
+        
+        <img src="fraicheur-product.jpg" alt="Fraicheur Ice Globes with blue packaging" class="main-image">
 
-        <img src="https://www.youtube.com/watch?v=pbhLeC8TDpA" alt="[A descriptive alt text for your image]" class="main-image">
+        <div class="content-padding">
+            <h2>See The Results Instantly</h2>
+            <p>Simply freeze these cooling, calming ice massagers and gently massage your face. You’ll see and feel them work immediately to reduce puffiness, fine lines, wrinkles, and redness. It's the ultimate beauty secret for a glowing, youthful face that's ready for anything.</p>
 
-        <div class="content">
-            <h2>[Benefit-Oriented Headline for the Main Content]</h2>
-            <p>[Use this space to tell a story or describe a problem your audience faces. Make it relatable and engaging.]</p>
-            <p>[Introduce your offer as the solution to this problem. Highlight the key benefits and how it will improve their lives.]</p>
-
-            <h3>Here's what you'll get:</h3>
             <ul class="features">
-                <li><strong>[Benefit 1]:</strong> [Short description of the first key benefit]</li>
-                <li><strong>[Benefit 2]:</strong> [Short description of the second key benefit]</li>
-                <li><strong>[Benefit 3]:</strong> [Short description of the third key benefit]</li>
-                <li><strong>[Benefit 4]:</strong> [Short description of the fourth key benefit]</li>
+                <li>Instantly reduces puffiness</li>
+                <li>Fast anti-aging action</li>
+                <li>Evens out skin tone</li>
+                <li>Reduces pigmentation</li>
+                <li>Eliminates redness</li>
+                <li>Minimizes appearance of pores</li>
             </ul>
 
-            <p>[Add a sense of urgency or scarcity. For example, "This is a limited-time offer" or "Spots are filling up fast!"]</p>
-        </div>
+            <div class="social-proof">
+                Join over 50,000 followers on social media and discover what everyone's talking about!
+            </div>
+        
+            <a href="[Your Affiliate Offer Link Here]" class="cta-button">YES! I WANT TO ORDER NOW</a>
 
-        <a href="[Your Affiliate Offer Link Here]" class="cta-button">[Your Strong Call to Action - e.g., "Claim Your Free Trial Now!"]</a>
-
-        <div class="terms">
-            <h3>Terms and Conditions</h3>
-            <p>[**IMPORTANT:** Insert all the terms and conditions associated with your offer here. This is crucial for transparency and to comply with advertising regulations. Be clear about any costs, subscriptions, or requirements.]</p>
-            <p>[Example: This is a special offer and may not be combined with other promotions. By clicking the button above, you agree to our terms of service and privacy policy. If the offer includes a trial, clearly state the cost after the trial period ends.]</p>
+            <div class="terms">
+                <p>You will be redirected to the official seller's page to complete your order securely.</p>
+            </div>
         </div>
     </div>
 
